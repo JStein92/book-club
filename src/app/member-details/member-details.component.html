@@ -1,3 +1,22 @@
-<div class="" *ngIf="selectedMember | async">
-  name : {{(selectedMember | async).name}}
+<div class="container" *ngIf="selectedMember | async">
+  <div class="card w-100%">
+    <div class="card-block">
+      <img class="card-img-top header-card" src='{{(selectedMember | async).image}}' alt="Thumbnail for member">
+      <h3 class="card-title name">{{(selectedMember | async).name}}</h3>
+      <p class="card-text">"{{(selectedMember | async).description}}"</p>
+
+    </div>
+          <p class="booksRead" *ngIf="selectedMember.booksRead">Books read: {{(selectedMember | async).booksRead.length}}</p>
+  </div>
+
+  <div class="card-columns" >
+    <div class="card" *ngFor = "let book of (selectedMember | async).booksRead">
+      <img class="card-img-top img-fluid" src='{{book.image}}' alt="Book image cap">
+      <div class="card-block">
+        <h4 class="card-title">{{book.title}}</h4>
+        <p class="card-text">By: {{book.author}}</p>
+      </div>
+    </div>
+  </div>
+
 </div>

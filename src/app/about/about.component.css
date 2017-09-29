@@ -1,0 +1,14 @@
+.page-header{
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.1);
+}
+.about-content{
+  width: 98%;
+  margin: 10px;
+  background-color: #f4f4f4;
+  height: 100%;
+}
+.about-content h3{
+  padding: 10px;
+}

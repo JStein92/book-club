@@ -1,0 +1,73 @@
+<div class="container">
+
+  <div *ngIf="memberToDisplay" class="memberToDisplay">
+
+    <div class="card">
+      <img class="card-img-top" src={{memberToDisplay.headerImage}} alt="Thumbnail for memberToDisplay">
+      <div class="card-block">
+        <h4 class="card-title">{{memberToDisplay.name}}</h4>
+        <p class="card-text description">{{memberToDisplay.description}}</p>
+        <p class="card-text goal"><small class="text-muted">Phone: {{memberToDisplay.phone}}</small></p>
+        <p class="card-text date"><small class="text-muted">Email: {{memberToDisplay.email}}</small></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="booksToDisplay" *ngIf="memberToDisplay">
+
+    <div class="card-deck books">
+      <div class="card book-card" *ngFor = "let book of memberToDisplay.booksRead">
+          <img class="card-img-top" src={{book.image}} alt="Thumbnail for book">
+        <div class="card-block">
+          <h4 class="card-title">{{book.title}}</h4>
+          <p class="card-text tier">{{book.author}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="memberForm" *ngIf="!memberToDisplay">
+    <div class="memberForm-header">
+      <h2>Add a new Member!</h2>
+    </div>
+
+    <label class="memberForm-label" for="name">Member Name</label>
+    <input type="text" name="name" #name class="form-control">
+
+    <label class="memberForm-label" for="description">Member Description</label>
+    <input type="text" name="managers" #description class="form-control">
+
+    <label class="memberForm-label" for="phone">Member Phone</label>
+    <input type="text" name="goal" #phone class="form-control">
+
+    <label class="memberForm-label" for="email">Member Email</label>
+    <input type="text" name="purpose" #email class="form-control">
+
+    <label class="memberForm-label" for="image">Member Image (URL)</label>
+    <input type="text" name="purpose" #image class="form-control">
+
+    <button class="btn btn-info addMember-btn" type="button" name="button" (click)="addMember(name.value,description.value,phone.value,email.value,image.value)">Add Member</button>
+  </div>
+
+
+
+  <div class="bookForm" *ngIf="memberToDisplay">
+    <label for="title">Book Title</label>
+    <input type="text" name="tier" #title class="form-control">
+
+    <label for="bookAuthor">Book Author</label>
+    <input type="text" name="bookAuthor" #author class="form-control">
+
+    <label for="bookImage">Book Cover Image (URL)</label>
+    <input type="text" name="bookImage" #bookImage class="form-control">
+
+    <button type="button" class="btn btn-info"name="button" (click)= "addBook(title.value,author.value,bookImage.value)">Add Book</button>
+  </div>
+
+  <div class="memberFormSubmit-btn" *ngIf="memberToDisplay">
+    <button type="button" name="button" class="btn btn-success" id="btn-submit" (click)="submitMember()" routerLink="">Submit Member</button>
+  </div>
+
+</div>

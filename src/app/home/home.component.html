@@ -8,14 +8,12 @@
       <div class="card-block">
         <h4 class="card-title">{{member.name}}</h4>
         <p class="card-text description">{{member.description}}</p>
-
       </div>
-            <p class="booksRead">Books Read: {{member.booksRead.length}}</p>
+      <p class="booksRead" *ngIf="member.booksRead">Books Read: {{member.booksRead.length}}</p>
       <div *ngIf="currentRoute === '/admin'">
 
       </div>
     </div>
-
   </div>
 </div>
 
