@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   showDetails(projectToShow){
+    this.router.navigate(['member-details',projectToShow.$key]);
   }
 
   onGoalChange(optionFromMenu){

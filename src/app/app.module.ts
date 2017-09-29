@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { MemberDetailsComponent } from './member-details/member-details.component';
 
 
 export const firebaseConfig = {
@@ -21,7 +22,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MemberDetailsComponent
   ],
   imports: [
     BrowserModule,

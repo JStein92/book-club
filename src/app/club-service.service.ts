@@ -21,6 +21,7 @@ export class ClubService {
   }
 
   getMemberByKey(memberKey:string){
+
     return this.database.object('members/' + memberKey);
   }
 
