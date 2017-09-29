@@ -1,39 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../project.model';
-import { ProjectService } from '../project.service';
-import { Reward } from '../reward.model';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import {ProjectPipe} from '../project.pipe';
+import {ClubService } from '../club-service.service'
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers:[ProjectService]
+  providers:[ClubService]
 })
 export class HomeComponent implements OnInit {
-  filterByGoal : string = "allGoals";
-  projects : FirebaseListObservable<any[]>;
-  currentRoute: string = this.router.url;
 
-  constructor(private router : Router, private projectService: ProjectService) { }
+  currentRoute: string = this.router.url;
+  members: FirebaseListObservable<any[]>;
+  constructor(private router : Router, private clubService: ClubService) { }
+
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
+    this.members = this.clubService.getMembers()
   }
 
   showDetails(projectToShow){
-    this.router.navigate(['projects',projectToShow.$key]);
   }
 
   onGoalChange(optionFromMenu){
-    this.filterByGoal = optionFromMenu;
-  }
-
-  favorite(projectToFavorite){
-    projectToFavorite.favorited = true;
-    this.projectService.addProjectToFavorites(projectToFavorite, projectToFavorite.$key);
-    console.log(projectToFavorite);
   }
 
 }

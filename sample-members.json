@@ -1,0 +1,63 @@
+{
+  "members": [{
+    "name": "Briana Vallene",
+    "description": "I love to read and sleep!",
+    "image": "http://ifandorbutpublishing.com/wp-content/uploads/2013/12/bigstock-Young-beautiful-girl-reading-a-14450870.jpg",
+    "phone": "123-123-1234",
+    "email":"briana@email.com",
+    "booksRead":[{
+        "title": "Anne Of Green Gables",
+        "author": "Lucy Maud Montgomery",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/619RpdGjmwL.jpg"
+      },
+      {
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41jG4xQjjsL._SY346_.jpg"
+      },
+      {
+        "title": "Animorphs: The Seperation",
+        "author": "K.A Applegate",
+        "image": "https://ewedit.files.wordpress.com/2016/12/the_separation_cover.png?w=633&h=862"
+      }]
+  },
+  {
+    "name": "Grant Greenman",
+    "description": "I tend to like books that are really boring and lame.",
+    "image": "http://www.youne.com/wp-content/uploads/2013/11/guy-reading-newspaper.jpg",
+    "phone": "145-321-1234",
+    "email":"grant@email.com",
+    "booksRead":[{
+        "title": "Steelheart",
+        "author": "Brandon Sanderson",
+        "image": "https://images.gr-assets.com/books/1398631518l/20342545.jpg"
+      },
+      {
+        "title": "Ready Player One",
+        "author": "Ernest Cline",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61d6DhRCBSL._SX322_BO1,204,203,200_.jpg"
+      },
+      {
+        "title": "Boys In The Boat",
+        "author": "Daniel James Brown",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51gmaOxmrhL._SX320_BO1,204,203,200_.jpg"
+      }]
+  },
+  {
+    "name": "Becky",
+    "description": "I love intellectual stories.",
+    "image": "http://www.publicdomainpictures.net/pictures/20000/velka/woman-reading-a-book.jpg",
+    "phone": "145-333-4444",
+    "email":"becky@email.com",
+    "booksRead":[{
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "image": "http://t3.gstatic.com/images?q=tbn:ANd9GcT3B_3mqOz-rNBVS10MpJJ-BvCagS6gFZ40Gza4BkF6l0x8YzJM"
+      },
+      {
+        "title": "The Women in The Castle ",
+        "author": "Jessica Shattuck",
+        "image": "https://images.gr-assets.com/books/1472678686l/30653967.jpg"
+      }]
+  }]
+}

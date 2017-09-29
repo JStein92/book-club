@@ -9,12 +9,7 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ProjectDetailsComponent } from './project-details/project-details.component';
-import { ProjectPipe } from './project.pipe';
-import { AdminComponent } from './admin/admin.component';
-import { AddProjectComponent } from './add-project/add-project.component';
-import { EditProjectComponent } from './edit-project/edit-project.component';
-import { FavoritedProjectsComponent } from './favorited-projects/favorited-projects.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,13 +21,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProjectDetailsComponent,
-    ProjectPipe,
-    AdminComponent,
-    AddProjectComponent,
-    EditProjectComponent,
-    FavoritedProjectsComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
