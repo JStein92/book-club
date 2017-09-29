@@ -1,0 +1,17 @@
+.jumbotron{
+  background-image: url("https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+.jumbotron h1{
+  font-size: 6em;
+  color: white;
+       text-shadow: 2px 2px 4px black;
+}
+.jumbotron p{
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+
+}

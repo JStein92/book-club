@@ -13,6 +13,7 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
 import { AboutComponent } from './about/about.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { AddMemberComponent } from './add-member/add-member.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 export const firebaseConfig = {
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     MemberDetailsComponent,
     AboutComponent,
     EditMemberComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -25,12 +25,25 @@ export class ClubService {
     return this.database.object('members/' + memberKey);
   }
 
-  updateProject(){
-
+  updateMember(memberToUpdate){
+    let memberEntryInFirebase = this.getMemberByKey(memberToUpdate.$key);
+    memberEntryInFirebase.update({name: memberToUpdate.name,
+                                   description: memberToUpdate.description,
+                                   image: memberToUpdate.image,
+                                   phone: memberToUpdate.phone,
+                                   email: memberToUpdate.email,
+                                   booksRead: memberToUpdate.booksRead})
   }
 
-  deleteProject(){
+  deleteMember(memberToDelete){
+    var memberEntryInFirebase = this.getMemberByKey(memberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
 
+  deleteBook(member,bookToDeleteKey){
+    console.log(member.$key + '/booksRead/' + bookToDeleteKey);
+    let bookEntryInFirebase = this.database.object('members/' + member.$key + '/booksRead/' + bookToDeleteKey);
+    bookEntryInFirebase.remove();
   }
 
 

@@ -1,3 +1,36 @@
-<p>
-  edit-member works!
-</p>
+<div class="edit-member">
+
+<h4>Edit Member</h4>
+
+<label>New Member Name:</label>
+<input [(ngModel)]="selectedMember.name">
+<br>
+
+<label>New Member Description:</label>
+<input [(ngModel)]="selectedMember.description">
+<br>
+
+<label>New Member Image (URL):</label>
+<input [(ngModel)]="selectedMember.image">
+<br>
+
+<label>New Member Phone:</label>
+<input [(ngModel)]="selectedMember.phone">
+<br>
+
+<label>New Member Email:</label>
+<input [(ngModel)]="selectedMember.email">
+<br>
+
+<div *ngIf="selectedMember.booksRead">
+  <h4 class="books-read-header">Books read:</h4>
+    <div *ngFor="let book of selectedMember.booksRead">
+      <p> - {{book.title}} <button (click) = "beginDeletingBook(selectedMember,book)"type="button" name="button" class="btn btn-danger deleteBook">X</button> </p>
+    </div>
+</div>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
+
+<button class = "btn btn-danger" (click)="beginDeletingMember(selectedMember)">Delete</button>
+
+</div>

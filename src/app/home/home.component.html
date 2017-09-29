@@ -11,7 +11,7 @@
       </div>
       <p class="booksRead" *ngIf="member.booksRead">Books Read: {{member.booksRead.length}}</p>
       <div *ngIf="currentRoute === '/admin'">
-
+        <app-edit-member [selectedMember]="member"></app-edit-member>
       </div>
     </div>
   </div>
